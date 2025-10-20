@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Health Data Tracking</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html">Dashboard</a>
+    <a href="tracking.html">Tracking</a>
+    <a href="nutrition.html">Nutrition</a>
+    <a href="exercise.html">Exercise</a>
+    <a href="settings.html">Settings</a>
+  </nav>
+  <main class="tracking-container">
+    <section class="forms">
+      <form id="glucose-form">
+        <h2>Log Glucose & HbA1c</h2>
+        <input type="number" name="glucose" placeholder="Glucose (mg/dL)" required>
+        <input type="number" name="hba1c" placeholder="HbA1c (%)">
+        <input type="datetime-local" name="timestamp" required>
+        <button type="submit">Add</button>
+      </form>
+      <form id="water-form">
+        <h2>Log Water Intake</h2>
+        <input type="number" name="amount" placeholder="Amount" required>
+        <select name="unit">
+          <option value="ml">ml</option>
+          <option value="glass">Glass</option>
+        </select>
+        <input type="datetime-local" name="timestamp" required>
+        <button type="submit">Add</button>
+      </form>
+      <form id="sleep-form">
+        <h2>Log Sleep</h2>
+        <input type="date" name="date" required>
+        <input type="time" name="bedtime" required>
+        <input type="time" name="waketime" required>
+        <input type="text" name="quality" placeholder="Quality (e.g. Good)">
+        <button type="submit">Add</button>
+      </form>
+    </section>
+    <section class="data-history">
+      <h3>Recent Glucose & HbA1c</h3>
+      <table id="glucose-history"></table>
+      <h3>Recent Water Intake</h3>
+      <table id="water-history"></table>
+      <h3>Recent Sleep</h3>
+      <table id="sleep-history"></table>
+    </section>
+    <section class="charts">
+      <canvas id="trackingGlucoseChart"></canvas>
+      <canvas id="trackingHbA1cChart"></canvas>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
