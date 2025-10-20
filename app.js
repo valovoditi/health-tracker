@@ -134,5 +134,8 @@ const app = {
 window.addEventListener('DOMContentLoaded', () => {
   app.updateDashboard();
   app.cloudSyncInit();
-  // Add more event handlers for forms and navigation as needed
+  
+  // NOTE: You must manually add event listeners for each form here to handle submission 
+  // and save the data to localStorage (e.g., glucose-form, water-form, exercise-form, goals-form).
+  // The provided app.js only has placeholder functions and dashboard updates.
 });
