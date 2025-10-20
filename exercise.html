@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exercise Log & Tips</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html">Dashboard</a>
+    <a href="tracking.html">Tracking</a>
+    <a href="nutrition.html">Nutrition</a>
+    <a href="exercise.html">Exercise</a>
+    <a href="settings.html">Settings</a>
+  </nav>
+  <main class="exercise-container">
+    <section id="exercise-log">
+      <h2>Exercise Logging</h2>
+      <form id="exercise-form">
+        <input type="datetime-local" name="timestamp" required>
+        <input type="text" name="activity" placeholder="Type (e.g. Walking)" required>
+        <input type="number" name="duration" placeholder="Duration (min)" required>
+        <select name="intensity">
+          <option value="Low">Low</option>
+          <option value="Moderate">Moderate</option>
+          <option value="High">High</option>
+        </select>
+        <button type="submit">Add</button>
+      </form>
+      <table id="exercise-history"></table>
+    </section>
+    <section id="exercise-guidance">
+      <div class="guidance-box">
+        <h3>Guidance</h3>
+        <p>Exercise is vital for diabetes management. Stay safe, be consistent, and consult your doctor for personalized advice!</p>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
