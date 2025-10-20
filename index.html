@@ -14,23 +14,61 @@
     <a href="exercise.html">Exercise</a>
     <a href="settings.html">Settings</a>
   </nav>
-  <main class="dashboard-container">
-    <section class="quick-stats">
-      <div class="card stat-glucose">Glucose: <span id="today-glucose">--</span></div>
-      <div class="card stat-calories">Calories: <span id="today-calories">--</span></div>
-      <div class="card stat-water">Water: <span id="today-water">--</span></div>
-      <div class="card stat-exercise">Exercise: <span id="today-exercise">--</span></div>
-    </section>
-    <section class="progress-charts">
-      <canvas id="glucoseChart"></canvas>
-      <canvas id="exerciseChart"></canvas>
-    </section>
-    <section class="quick-log">
-      <button onclick="app.quickLog('glucose')">Log Glucose</button>
-      <button onclick="app.quickLog('meal')">Log Meal</button>
-      <button onclick="app.quickLog('exercise')">Log Exercise</button>
-      <button onclick="app.quickLog('sleep')">Log Sleep</button>
-    </section>
+    <main class="container">
+        <h1>Welcome Back! Keep Up the Great Work!</h1>
+
+        <section class="quick-stats">
+            <h2>Today's Focus</h2>
+            <div class="stats-grid">
+                <div class="stat-card primary-stat">
+                    <h3>Fasting Glucose</h3>
+                    <!-- ID updated to match the new dashboard logic in app.js -->
+                    <p class="value" id="latest-glucose">N/A mg/dL</p> 
+                    <p class="goal-status" id="glucose-status">Loading Data...</p>
+                </div>
+                <div class="stat-card">
+                   <h3>Calories Consumed Today</h3>
+                   <p class="value" id="calories-consumed">N/A kcal</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Water Intake</h3>
+                    <p class="value" id="water-intake">N/A / 8 Glasses</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Exercise Logged Today</h3>
+                    <p class="value" id="exercise-duration">0 / 30 Mins</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="progress-chart">
+            <h2>Your Progress at a Glance</h2>
+            <div class="chart-placeholder">
+                [Charts for the Dashboard are loaded via Chart.js on the Data Tracking page.]
+            </div>
+            <p class="chart-note">Track your long-term HbA1c and Glucose progress in the **Data Tracking** section.</p>
+        </section>
+
+        <hr>
+
+       <section class="daily-log">
+   	<h2>Quick Log</h2>
+        <div class="log-buttons">
+        <!-- Log Glucose leads to the Tracking page and jumps to the Glucose Form -->
+        <a href="tracking.html#glucose-log-form" class="log-btn">Log Glucose</a>
+        
+        <!-- Log Meal leads to the Nutrition page -->
+        <a href="nutrition.html" class="log-btn">Log Meal</a>
+        
+        <!-- Log Exercise leads to the Exercise page -->
+        <a href="exercise.html" class="log-btn">Log Exercise</a>
+        
+        <!-- Log Sleep leads to the Tracking page and jumps to the Sleep Form -->
+        <a href="tracking.html#sleep-log-form" class="log-btn">Log Sleep</a>
+    </div>
+</section>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="app.js"></script>
