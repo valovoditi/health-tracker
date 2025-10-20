@@ -1,38 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Health Tracker Dashboard</title>
-  <link rel="stylesheet" href="styles.css">
+    <title>Health Tracker</title>
 </head>
 <body>
-  <nav class="navbar">
-    <a href="index.html">Dashboard</a>
-    <a href="tracking.html">Tracking</a>
-    <a href="nutrition.html">Nutrition</a>
-    <a href="exercise.html">Exercise</a>
-    <a href="settings.html">Settings</a>
-  </nav>
-  <main class="dashboard-container">
-    <section class="quick-stats">
-      <div class="card stat-glucose">Glucose: <span id="today-glucose">--</span></div>
-      <div class="card stat-calories">Calories: <span id="today-calories">--</span></div>
-      <div class="card stat-water">Water: <span id="today-water">--</span></div>
-      <div class="card stat-exercise">Exercise: <span id="today-exercise">--</span></div>
-    </section>
-    <section class="progress-charts">
-      <canvas id="glucoseChart"></canvas>
-      <canvas id="exerciseChart"></canvas>
-    </section>
-    <section class="quick-log">
-      <button onclick="app.quickLog('glucose')">Log Glucose</button>
-      <button onclick="app.quickLog('meal')">Log Meal</button>
-      <button onclick="app.quickLog('exercise')">Log Exercise</button>
-      <button onclick="app.quickLog('sleep')">Log Sleep</button>
-    </section>
-  </main>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="app.js"></script>
+    <h1>Welcome to Health Tracker</h1>
 </body>
 </html>
