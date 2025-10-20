@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Settings & Goals</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html">Dashboard</a>
+    <a href="tracking.html">Tracking</a>
+    <a href="nutrition.html">Nutrition</a>
+    <a href="exercise.html">Exercise</a>
+    <a href="settings.html">Settings</a>
+  </nav>
+  <main class="settings-container">
+    <section id="user-account">
+      <h2>Account</h2>
+      <div>User: <span id="user-displayname">Guest</span></div>
+      <div>User ID: <span id="user-id"></span></div>
+    </section>
+    <section id="data-management">
+      <h2>Data Management</h2>
+      <button onclick="app.exportData()">Export Data (CSV)</button>
+      <button onclick="app.resetData()">Reset/Delete All Data</button>
+    </section>
+    <section id="goals">
+      <h2>Goals</h2>
+      <form id="goals-form">
+        <input type="number" name="glucoseTarget" placeholder="Fasting Glucose Target (mg/dL)" required>
+        <input type="number" name="waterGoal" placeholder="Water Goal (glasses/day)" required>
+        <input type="number" name="exerciseGoal" placeholder="Exercise Goal (min/day)" required>
+        <button type="submit">Save Goals</button>
+      </form>
+      <div id="goals-messages"></div>
+    </section>
+    <section id="firebase-block">
+      <h2>Cloud Sync</h2>
+      <div id="firebase-status">Local Mode</div>
+      <!-- Firebase SDK scripts and config injected here by CI/environment -->
+    </section>
+  </main>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
